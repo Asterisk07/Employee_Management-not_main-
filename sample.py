@@ -5,6 +5,11 @@ def validateLogin(username, password):
 	print("username entered :", username.get())
 	print("password entered :", password.get())
 	return
+def my_window():
+    top=Toplevel()
+    c=Button(top,text="Update")
+    c.pack()
+
 root=Tk()
 root.geometry('400x150')  
 frame=Frame(root)
@@ -18,6 +23,6 @@ e=Label(frame,text="Password:")
 e.grid(row=1,column=0)
 e1=Entry(frame,textvariable=username).grid(row=0,column=1)
 e2=Entry(frame,textvariable=password).grid(row=1,column=1)
-b=Button(root,text="Login",command=root.destroy)
+b=Button(root,text="Login",command=my_window())
 b.pack()
 root.mainloop()
